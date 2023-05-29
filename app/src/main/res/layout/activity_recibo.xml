@@ -50,6 +50,7 @@
         android:layout_height="wrap_content"
         android:text="Numero"
         android:id="@+id/txtNumero"
+        android:inputType="number"
         android:textSize="20dp"
         app:layout_constraintTop_toBottomOf="@id/lblUsuario"
         app:layout_constraintStart_toEndOf="@+id/lblNumero"
@@ -93,7 +94,7 @@
         android:layout_height="wrap_content"
         android:text="Horas trabajadas"
         android:id="@+id/txtHoras"
-
+        android:inputType="numberDecimal"
         android:textSize="20dp"
         app:layout_constraintTop_toBottomOf="@id/lblhoras"
         ></EditText>
@@ -114,6 +115,7 @@
         android:layout_height="wrap_content"
         android:text="Horas extras"
         android:id="@+id/txtHorasExtras"
+        android:inputType="numberDecimal"
 
         android:textSize="20dp"
         app:layout_constraintTop_toBottomOf="@id/lblHorasExtras"
