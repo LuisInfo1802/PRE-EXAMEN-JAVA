@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,7 +24,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+    iniciarComponentes();
+        btnIngresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BtnIngresar();
+            }
+        });
 
+
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnSalir();
+            }
+        });
 
 
 
@@ -38,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void setBtnIngresar()
+    private void BtnIngresar()
     {
         String strUsuario;
         strUsuario=getResources().getString(R.string.nombre);

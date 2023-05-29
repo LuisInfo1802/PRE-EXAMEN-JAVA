@@ -1,5 +1,7 @@
 package com.example.pre_examen;
 
+import java.text.DecimalFormat;
+
 public class ReciboNomina {
 
 
@@ -78,17 +80,26 @@ public class ReciboNomina {
     {
         double resultado=0.0;
         double pagoBase=200;
+        double pagoPorHoras=0.0;
+
             if(this.getPuesto()==1)
             {
-                resultado=pagoBase*this.getHorasTrabajadas()+(pagoBase+(0.2)*2*this.getHorasExtras());
+                pagoPorHoras=pagoBase+(pagoBase*0.2);
             } else if (this.getPuesto()==2) {
-                resultado=pagoBase*this.getHorasTrabajadas()+(pagoBase+(0.5)*2*this.getHorasExtras());
+                pagoPorHoras=pagoBase+(pagoBase*0.5);
 
             } else if (this.getPuesto()==3) {
-                resultado=pagoBase*this.getHorasTrabajadas()+(pagoBase+(1.0)*2*this.getHorasExtras());
+                pagoPorHoras=pagoBase+(pagoBase*1.0);
 
             }
-        return (float) resultado;
+
+            resultado= (pagoBase*this.getHorasTrabajadas())+(this.getHorasExtras()*pagoPorHoras*2);
+
+            return (float) resultado;
+
+
+
+
     }
 
     public float calcularImpuesto()

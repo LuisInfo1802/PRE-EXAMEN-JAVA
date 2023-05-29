@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class Activity_Recibo extends AppCompatActivity {
 
 
@@ -30,6 +32,7 @@ public class Activity_Recibo extends AppCompatActivity {
     private EditText txtSubtotal;
     private EditText txtImpuesto;
     private EditText txtTotalPagar;
+    DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     private ReciboNomina reciboNomina = new ReciboNomina(0,"",0.0,0.0,0,0.0);
     @Override
@@ -109,14 +112,15 @@ public class Activity_Recibo extends AppCompatActivity {
         }
         reciboNomina.setPuesto(puesto);
         double subtotal=reciboNomina.calcularSubtotal();
-        txtSubtotal.setText(String.valueOf(subtotal));
+
+        txtSubtotal.setText(decimalFormat.format(subtotal));
 
 
         double impuesto=reciboNomina.calcularImpuesto();
-        txtImpuesto.setText(String.valueOf(impuesto));
+        txtImpuesto.setText(decimalFormat.format(impuesto));
 
         double total=reciboNomina.calcularTotalPagar();
-        txtTotalPagar.setText(String.valueOf(total));
+        txtTotalPagar.setText(decimalFormat.format(total));
 
 
 
