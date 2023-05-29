@@ -5,19 +5,45 @@ public class ReciboNomina {
 
 
 
-    int numRecibo;
-    String nombre;
-    float horasTrabajadas;
-    float horasExtras;
-    int puesto;
-    float impuestoPor;
+   public int numRecibo;
+    public String nombre;
+    public double horasTrabajadas;
+    public double horasExtras;
+    public int puesto;
+    public double impuestoPor;
 
-    public float getHorasExtras() {
+
+    public ReciboNomina(int numRecibo, String nombre, double horasTrabajadas, double horasExtras, int puesto, double impuestoPor) {
+        this.numRecibo = numRecibo;
+        this.nombre = nombre;
+        this.horasTrabajadas = horasTrabajadas;
+        this.horasExtras = horasExtras;
+        this.puesto = puesto;
+        this.impuestoPor = impuestoPor;
+    }
+
+    public double getHorasTrabajadas() {
+        return horasTrabajadas;
+    }
+
+    public void setHorasTrabajadas(double horasTrabajadas) {
+        this.horasTrabajadas = horasTrabajadas;
+    }
+
+    public double getHorasExtras() {
         return horasExtras;
     }
 
-    public void setHorasExtras(float horasExtras) {
+    public void setHorasExtras(double horasExtras) {
         this.horasExtras = horasExtras;
+    }
+
+    public double getImpuestoPor() {
+        return impuestoPor;
+    }
+
+    public void setImpuestoPor(double impuestoPor) {
+        this.impuestoPor = impuestoPor;
     }
 
     public int getNumRecibo() {
@@ -36,13 +62,7 @@ public class ReciboNomina {
         this.nombre = nombre;
     }
 
-    public float getHorasTrabajadas() {
-        return horasTrabajadas;
-    }
 
-    public void setHorasTrabajadas(float horasTrabajadas) {
-        this.horasTrabajadas = horasTrabajadas;
-    }
 
     public int getPuesto() {
         return puesto;
@@ -52,13 +72,7 @@ public class ReciboNomina {
         this.puesto = puesto;
     }
 
-    public float getImpuestoPor() {
-        return impuestoPor;
-    }
 
-    public void setImpuestoPor(float impuestoPor) {
-        this.impuestoPor = impuestoPor;
-    }
 
     public float calcularSubtotal()
     {
