@@ -1,7 +1,9 @@
 package com.example.pre_examen;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -141,7 +143,24 @@ public class Activity_Recibo extends AppCompatActivity {
 
     private void btnRegresar()
     {
+        AlertDialog.Builder confirmar = new AlertDialog.Builder(this);
 
+        confirmar.setTitle("Recibo Nomina");
+        confirmar.setMessage("¿Desea Salir?");
+        confirmar.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        confirmar.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // No hacer nada
+            }
+        });
+
+        confirmar.show();
     }
 
 
