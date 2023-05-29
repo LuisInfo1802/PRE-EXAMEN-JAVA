@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(getApplicationContext(),"El Usuario es incorrecto",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"El Usuario es incorrecto o el campo esta vacio",Toast.LENGTH_SHORT).show();
         }
     }
 
